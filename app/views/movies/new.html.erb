@@ -1,0 +1,7 @@
+<h3>Add a new movie</h3>
+<%= form_with model: @movie do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.text_field :review, placeholder: "review" %>
+  <%= form.submit %>
+<% end %>
+
