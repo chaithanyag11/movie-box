@@ -1,13 +1,15 @@
+<div class="d-fex align-items-center justify-content-center">
 <h1> MOVIE BOX </h1>
+</div>
 <ul>
 <table>
   <% @movies.each do |movie| %>
     <tr>
       <td><%= link_to movie.name, movie_path(movie) %></td>
       <td><%= button_to 'Edit', edit_movie_path(movie), method: 'get'%></td>
-      <td><%= button_to 'Remove', movie_path(movie), method: 'delete', data: { confirm: 'Are you sure?' } %></td>
+      <td><%= button_to 'Remove', movie_path(movie), method: 'delete' %></td>
   <% end %>
 </table>
 </ul>
 <br>
-<%= link_to "Add a New review", new_movie_path %>
+<%= link_to "Add a New movie", new_movie_path %>
